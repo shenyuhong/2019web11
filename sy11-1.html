@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<style>
+			div{
+				background-color: pink;
+				margin: 20px auto;
+				width: 300px;
+				height: 100px;
+				color: #fff;
+				text-align: center;
+				font-size: 30px;
+				
+				padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap1">我是 wrap1 </div>
+		<div id="wrap2">我是 wrap2 </div>
+		<script>
+			let oWrap1 = document.getElementById("wrap1"),
+				oWrap2 = document.getElementById("wrap2");
+				oWrap1.onmouseenter = function(){
+				oWrap2.innerHTML = "鼠标移入了wrap1";
+			}
+			oWrap1.onmouseleave = function(){
+				oWrap2.innerHTML = "鼠标离开了wrap1";
+			}
+			oWrap2.onmouseenter = function(){
+				oWrap1.innerHTML = "鼠标移入了wrap2";
+			}
+			oWrap2.onmouseleave = function(){
+				oWrap1.innerHTML = "鼠标离开了wrap2";
+			}
+	
+		</script>
+	</body>
+</html>
